@@ -1,0 +1,47 @@
+.advantage{
+    padding: 70px 0 95px 0;
+    min-height: 469px;
+    background-color: #f6f6f6;
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        font-family: 'Museo Sans Cyrl';
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 300;
+        text-align: center;
+        color: #0d0d0d;
+        margin-top: 65px;
+        flex: 1 1 33.3333%;
+        img{
+            width: 70px;
+            margin: 0 auto;
+        }
+    }
+    &__title{
+        font-size: 18px;
+        font-weight: 700;
+        color: #0d0d0d;
+        margin-top: 39px;
+    }
+    &__descr{
+        width: 239px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 26px;
+    }
+}
+
+@media(max-width: 800px){
+        .advantage{
+        &__item{
+            flex: 1 1 50%;
+        }
+    }   
+}
