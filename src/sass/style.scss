@@ -7,6 +7,7 @@
 .container{
     max-width: 950px;
     margin: 0 auto;
+    position: relative;
 }
 
 @import 'blocks/promo';
@@ -15,4 +16,5 @@
 @import 'blocks/title';
 @import 'blocks/advantage';
 @import 'blocks/consultation';
-@import 'blocks/forms'
+@import 'blocks/forms';
+@import 'blocks/carousel'
