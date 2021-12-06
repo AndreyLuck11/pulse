@@ -1,6 +1,6 @@
 .catalog{
     padding: 0 100px;
-    height: 900px;
+    height: 1600px;
     &__tabs{
         margin-top: 69px;
         list-style-type: none;
@@ -41,13 +41,22 @@
     
     &__content{
         margin-top: 60px;
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap;  
+        &_active{
+            display: flex;
+        }
     }
 
     &-item{
+
         width: 300px;
         min-height: 440px;
         border: 2px solid #e8e8e8;
         padding: 20px 20px 26px 20px;
+        overflow: hidden;
+        margin-top: 20px;
         &__img{
             display: block;
             margin: 0 auto;
@@ -78,8 +87,16 @@
             text-decoration: underline;
             color: $main-color;
             text-align: center;
+            cursor: pointer;
             &:hover{
                 color: $main-color;
+            }
+            &_back{
+               position: absolute;
+               bottom: -14px;
+               left: 50%;
+               transform: translateX(-60%);
+               
             }
         }
         hr {
@@ -108,5 +125,73 @@
             font-weight: 700;
             color: #050505;
         }
+        &__wrapper{
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &__content{
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-100%);
+            transition: 0.5s all;
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+        &__list{
+            position: relative;
+            width: 50%;
+            margin-left: 20px;
+            transform: translateX(0%);
+            padding-right: 20px;
+            padding-left: 0;
+            bottom: 0;
+            list-style-type: none;
+            transition: 0.5s all;
+            li{
+                position: relative;
+                font-size: 14px;
+                line-height: 1.2;
+                font-weight: 300;
+                color: #555555;
+                margin-bottom: 20px;
+                padding-left: 19px;
+                &::before{
+                    content:'';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    left: 0px;
+                    top: 5px;
+                }
+            }
+            &_active{
+                transform: translateX(-100%);
+                margin-left: -2px;
+            }
+
+        }
+        
+        &__back{
+            display: block;
+            margin-top: 17px;
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 500;
+            text-decoration: underline;
+            color: $main-color;
+            text-align: center;
+            cursor: pointer;
+            position: absolute;
+            bottom: -14px;
+            left: 50%;
+            transform: translateX(-60%);
+            &:hover{
+                color: $main-color;
+            }
+        }
+        
     }
 }
