@@ -1,6 +1,6 @@
 .catalog{
-    padding: 0 100px;
-    height: 1600px;
+    // padding: 100px 0;
+    min-height: 1300px;
     &__tabs{
         margin-top: 69px;
         list-style-type: none;
@@ -42,7 +42,8 @@
     &__content{
         margin-top: 60px;
         display: none;
-        justify-content: space-between;
+        // justify-content: space-between;
+        gap: 1em;
         flex-wrap: wrap;  
         &_active{
             display: flex;
@@ -57,6 +58,7 @@
         padding: 20px 20px 26px 20px;
         overflow: hidden;
         margin-top: 20px;
+        
         &__img{
             display: block;
             margin: 0 auto;
@@ -194,4 +196,20 @@
         }
         
     }
+}
+
+@media(max-width: 972px){
+    .catalog{
+        &__tabs{
+            flex-wrap: wrap;
+        }
+        &__tab{
+            margin-bottom: 10px;
+        }
+        &__content{
+            justify-content: center;
+        }
+
+    }
+
 }
