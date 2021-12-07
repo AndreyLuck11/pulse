@@ -206,8 +206,13 @@
         &__tab{
             margin-bottom: 10px;
         }
+        img{
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
         &__content{
             justify-content: center;
+        
         }
 
     }

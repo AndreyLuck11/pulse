@@ -1,6 +1,8 @@
 .reviews{
     min-height: 950px;
-    padding-bottom: 71px;
+
+    padding: 50px 10px 71px 10px;
+
 
     &__wrapper{
         margin-top: 70px;
@@ -8,9 +10,14 @@
 
     &-item{
         display: flex;
+        margin-bottom: 102px;
         &__img{
             // margin: auto 0; 
             margin-right: 62px;
+            width: 169px;
+            img{
+                width: 100%;
+            }
         }
         &__title{
             font-size: 18px;
@@ -29,10 +36,28 @@
             font-weight: 300;
             color: #0d0d0d;
         }
-        margin-bottom: 102px;
-
+        
         &:last-child{
             margin-bottom: 0;
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .reviews{
+        &-item{
+            margin-bottom: 50px;
+            flex-direction: column;
+            &__img{
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+            }
+            &__wrapper{
+                text-align: center;
+            }
+            &__title{
+                margin-top: 10px;
+            }
         }
     }
 }
