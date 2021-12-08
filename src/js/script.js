@@ -78,3 +78,4 @@ const slider = tns({
       togglesSlide('.catalog-item__link');
     });
     })(jQuery);
+
