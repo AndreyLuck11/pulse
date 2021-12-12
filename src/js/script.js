@@ -76,6 +76,48 @@ const slider = tns({
       
       togglesSlide('.catalog-item__back');
       togglesSlide('.catalog-item__link');
+
+      //modal
+      $('[data-modal=consultation]').on('click', function(){
+          $('.overlay, #consultation').fadeIn('slow');
+      });
+
+      $('.modal__close').on('click', function(){
+        $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+      });
+
+      $('.button_mini').each(function(i){
+        $(this).on('click', function(){
+          $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+          $('.overlay, #order').fadeIn('slow');
+        })
+      });
+      
+      //validation
+      function valideForms(form){
+        $(form).validate({
+          rules: {
+            name: "required",
+            phone:"required",
+            email: {
+              required: true,
+              email: true
+            }
+          },
+          messages: {
+              name: "Please specify your name",
+              phone: "Please enter your phone",
+              email: {
+                required: "We need your email address to contact you",
+                email: "Your email address must be in the format of name@domain.com"
+              }
+          }
+        });
+      }
+
+      validateForms('#consultation form');
+      validateForms('#order form');
+      validateForms('#consultation-form');
     });
     })(jQuery);
 

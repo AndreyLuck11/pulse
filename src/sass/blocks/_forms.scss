@@ -17,6 +17,9 @@
             margin-bottom: 20px;
         }
     }
+    &_mt25{
+        margin-top: 25px;
+    }
    
 }
 
@@ -24,5 +27,13 @@
     .feed-form{
         margin: 0 auto;
         margin-top: 36px;
+    }
+}
+
+@media(max-width:486px){
+    .feed-form{
+        &_mt25{
+            width: 200px;
+        }
     }
 }

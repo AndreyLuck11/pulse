@@ -26,3 +26,12 @@
         font-size: 14px;
     }
 }
+
+@media(max-width:486px){
+    .button{
+        &_adaptive{
+            width: 200px;
+        }
+    }
+    // button_adaptive
+}
