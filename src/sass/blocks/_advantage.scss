@@ -1,3 +1,4 @@
+
 .advantage{
     padding: 70px 0 95px 0;
     min-height: 469px;
@@ -35,6 +36,15 @@
         display: block;
         margin: 0 auto;
         margin-top: 26px;
+    }
+    &__icon{
+        &_animated{
+            // animation: heartbeat 1.5s ease infinite;
+            animation-name: heartbeat;
+            animation-duration: 1.5s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
     }
 }
 
